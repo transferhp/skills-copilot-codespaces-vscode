@@ -1,5 +1,5 @@
 // create web server
-const express = require('express');
+import express from 'express';
 const app = express();
 const port = 3000;
 
@@ -11,7 +11,7 @@ const comments = [
 ];
 
 // create route
-app.get('/comments', (req, res) => {
+app.get('/comments', (_, res) => {
   res.json(comments);
 });
 
